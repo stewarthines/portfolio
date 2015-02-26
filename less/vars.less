@@ -1,0 +1,33 @@
+
+// Colors
+@grayBase:#202020;
+
+// Type
+@fontFamily:"proxima-nova",sans-serif;
+
+@fontColor:lighten(@grayBase, 10);
+// Breakpoints
+@bpMobile:420px;
+
+@bpSmall: 768px;
+@bpScreen: 1024px;
+// Spacing
+@spacingTiny: 10px;
+@spacingSmall: 16px;
+@spacingBase: 24px;
+@spacingMedium: 32px;
+@spacingBig:64px;
+
+@spacingHuge: 120px;
+
+//Some Mixins
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
