@@ -1,14 +1,12 @@
-
 // Colors
-@grayBase:#202020;
-
+@grayBase: #202020;
 // Type
-@fontFamily:"proxima-nova",sans-serif;
-
-@fontColor:lighten(@grayBase, 10);
+@fontFamily: "proxima-nova",
+sans-serif;
+@fontColor: lighten(@grayBase,
+10);
 // Breakpoints
-@bpMobile:420px;
-
+@bpMobile: 420px;
 @bpSmall: 768px;
 @bpScreen: 1024px;
 // Spacing
@@ -16,18 +14,22 @@
 @spacingSmall: 16px;
 @spacingBase: 24px;
 @spacingMedium: 32px;
-@spacingBig:64px;
-
+@spacingBig: 64px;
 @spacingHuge: 120px;
-
 //Some Mixins
 .clearfix() {
-  &:before,
-  &:after {
-    content: " "; // 1
-    display: table; // 2
-  }
-  &:after {
-    clear: both;
-  }
+    &:before, &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.headerFont() {
+    font-family: "futura-pt-condensed", impact;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }

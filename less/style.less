@@ -2,25 +2,24 @@
 @import "remixings";
 @import "vars";
 //Global
- html,
+html,
 body {
     font-size: 16px;
     line-height: 1.5em;
     letter-spacing: 0.01em;
     font-weight: 400;
     color: @fontColor;
-
-font-family: @fontFamily;
-
+    font-family: @fontFamily;
 }
+
 .container {
     display: block;
     width: 90%;
     max-width: @bpScreen;
-
-margin: 0 auto;
+    margin: 0 auto;
     .clearfix();
 }
+
 // Header
 header#header {
     display: block;
@@ -29,10 +28,7 @@ header#header {
     padding: @spacingHuge 0;
     text-align: center;
     h1 {
-        font-family: "futura-pt-condensed";
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
+        .headerFont();
     }
     .profile-avatar img {
         display: block;
@@ -50,14 +46,16 @@ header#header {
         }
     }
 }
+
 //Content
 main {
     .portfolio-area {
-        .margin(50px, auto);
-        .max-width(960px);
+        .margin(@spacingSmall, auto);
+        max-width: @bpScreen;
         width: 100%;
         .portfolio-list {
             padding-left: 0;
+            .clearfix();
         }
         .portfolio-item {
             .margin-bottom(30px);
@@ -70,15 +68,13 @@ main {
         .portfolio-content {
             text-align: center;
         }
-        .portfolio-cover {
-            width: 100%;
-        }
         .portfolio-image {
-            border: 8px solid #fff;
+            width: 100%;
             max-width: 100%;
+            cursor: pointer;
         }
         .portfolio-title {
-            .font-size(14px);
+            .font-size(12px);
             text-transform: capitalize;
             vertical-align: middle;
             width: 100%;
@@ -100,6 +96,7 @@ main {
         }
     }
 }
+
 //Footer
 .portfolio-footer {
     .margin(30px, auto);
